@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ilustrasi Jambu Hijau Isi Pink + Pisang (HTML + SVG)</title>
+  <style>
+    :root{
+      --bg:#0f172a;
+      --green-1:#b6ff8c;
+      --green-2:#62b84b;
+      --pink:#ffb6c1;
+      --seed:#8f5a3b;
+      --leaf:#2d8f3a;
+      --banana:#ffe55c;
+      --banana-dark:#d4a82f;
+      --banana-tip:#5a3c0d;
+    }
+    body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
+      background: var(--bg); font-family:sans-serif; color:white;}
+    .scene{display:flex;flex-direction:column;align-items:center;gap:20px;}
+    svg{width:360px;height:auto}
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <h2>🍐 Jambu Hijau Isi Pink + 🍌 Pisang</h2>
+
+    <!-- SVG Jambu Hijau isi Pink -->
+    <svg viewBox="0 0 600 480" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="jambuSkin" cx="30%" cy="30%">
+          <stop offset="0%" stop-color="var(--green-1)"/>
+          <stop offset="100%" stop-color="var(--green-2)"/>
+        </radialGradient>
+        <linearGradient id="jambuGloss" x1="0%" x2="100%" y1="0%" y2="100%">
+          <stop offset="0%" stop-color="#fff" stop-opacity="0.3"/>
+          <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      
+      <!-- body -->
+      <path d="M450 210 C 450 110, 380 40, 300 60 C 230 40, 140 110, 150 210 C 120 250, 160 320, 230 350 C 270 370, 320 370, 360 350 C 430 320, 470 250, 450 210 Z"
+            fill="url(#jambuSkin)" stroke="#2f6e1c" stroke-width="4"/>
+
+      <!-- flesh -->
+      <path d="M200 180 C 220 150, 280 140, 340 150 C 380 160, 420 190, 400 230 C 380 260, 320 280, 260 270 C 220 260, 190 230, 200 180 Z"
+            fill="var(--pink)" stroke="#e48da3" stroke-width="3"/>
+
+      <!-- seeds -->
+      <g fill="var(--seed)">
+        <ellipse cx="260" cy="210" rx="6" ry="9"/>
+        <ellipse cx="280" cy="225" rx="6" ry="9"/>
+        <ellipse cx="300" cy="210" rx="6" ry="9"/>
+      </g>
+
+      <!-- leaf -->
+      <path d="M360 40 C 320 20, 280 40, 300 70 C 320 100, 360 70, 360 40 Z" fill="var(--leaf)"/>
+
+      <!-- gloss -->
+      <path d="M180 110 C 190 70, 270 60, 320 90 C 360 110, 300 150, 240 150 C 210 150, 170 130, 180 110 Z" fill="url(#jambuGloss)"/>
+    </svg>
+
+    <!-- SVG Pisang -->
+    <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+      <!-- Banana body -->
+      <path d="M100 150 C 120 250, 480 250, 500 150 C 480 180, 140 180, 100 150 Z"
+            fill="var(--banana)" stroke="var(--banana-dark)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Banana top tip -->
+      <ellipse cx="95" cy="150" rx="10" ry="15" fill="var(--banana-tip)"/>
+      <!-- Banana bottom tip -->
+      <ellipse cx="505" cy="150" rx="8" ry="12" fill="var(--banana-tip)"/>
+    </svg>
+
+  </div>
+</body>
+</html>

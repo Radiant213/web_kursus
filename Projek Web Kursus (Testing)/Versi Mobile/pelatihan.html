@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Pelatihan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>Learning Platform</h1>
+            <p>Tingkatkan skill dan raih karir impianmu</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="pelatihan.html" class="nav-tab active">
+                <i class="fas fa-book"></i>
+                <span>Pelatihan</span>
+            </a>
+            <a href="pelatihan-saya.html" class="nav-tab">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Belajar</span>
+            </a>
+            <a href="profil.html" class="nav-tab">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <div class="card">
+                <div class="card-title">Daftar Pelatihan</div>
+                
+                <div class="course-filters">
+                    <button class="filter-btn active">Semua</button>
+                    <button class="filter-btn">Pemrograman</button>
+                    <button class="filter-btn">Desain</button>
+                    <button class="filter-btn">Bisnis</button>
+                </div>
+                
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x140/42a5f5/ffffff?text=HTML+CSS" alt="HTML CSS" class="course-image">
+                        <div class="course-content">
+                            <div class="course-title">HTML & CSS Dasar</div>
+                            <div class="course-desc">Pelajari dasar-dasar pembuatan website modern</div>
+                            <div class="course-meta">
+                                <span>🕒 12 Jam</span>
+                                <span class="course-price">Gratis</span>
+                            </div>
+                            <a href="#" class="btn btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x140/ffc107/000000?text=JavaScript" alt="JavaScript" class="course-image">
+                        <div class="course-content">
+                            <div class="course-title">JavaScript Pemula</div>
+                            <div class="course-desc">Mulai petualanganmu dalam pemrograman JavaScript</div>
+                            <div class="course-meta">
+                                <span>🕒 20 Jam</span>
+                                <span class="course-price">Rp 199.000</span>
+                            </div>
+                            <a href="#" class="btn btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                    
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x140/4caf50/ffffff?text=UI+UX" alt="UI/UX" class="course-image">
+                        <div class="course-content">
+                            <div class="course-title">UI/UX Design</div>
+                            <div class="course-desc">Belajar merancang pengalaman pengguna yang menarik</div>
+                            <div class="course-meta">
+                                <span>🕒 15 Jam</span>
+                                <span class="course-price">Rp 299.000</span>
+                            </div>
+                            <a href="#" class="btn btn-block">Lihat Detail</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Here you would normally filter the courses
+                    // For this example, we'll just log the filter
+                    console.log('Filter selected:', this.textContent);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

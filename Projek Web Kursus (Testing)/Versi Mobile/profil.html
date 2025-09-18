@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Profil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="header">
+            <h1>Learning Platform</h1>
+            <p>Tingkatkan skill dan raih karir impianmu</p>
+        </header>
+
+        <nav class="nav-tabs">
+            <a href="index.html" class="nav-tab">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="pelatihan.html" class="nav-tab">
+                <i class="fas fa-book"></i>
+                <span>Pelatihan</span>
+            </a>
+            <a href="pelatihan-saya.html" class="nav-tab">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Belajar</span>
+            </a>
+            <a href="profil.html" class="nav-tab active">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <main class="main-content">
+            <div class="card">
+                <div class="profile-header">
+                    <div class="profile-avatar">JD</div>
+                    <div class="profile-info">
+                        <h2>John Doe</h2>
+                        <p>john.doe@example.com</p>
+                    </div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="profile-stat">
+                        <div class="number">5</div>
+                        <div class="label">Pelatihan</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="number">12</div>
+                        <div class="label">Jam Belajar</div>
+                    </div>
+                    <div class="profile-stat">
+                        <div class="number">3</div>
+                        <div class="label">Sertifikat</div>
+                    </div>
+                </div>
+                
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <i class="fas fa-edit"></i>
+                        <span>Edit Profil</span>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fas fa-lock"></i>
+                        <span>Keamanan</span>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Bantuan</span>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Syarat & Ketentuan</span>
+                    </li>
+                    <li class="menu-item">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Keluar</span>
+                    </li>
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Menu item click handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    const action = this.querySelector('span').textContent;
+                    alert(`Aksi: ${action}`);
+                    // Here you would normally handle the menu action
+                });
+            });
+        });
+    </script>
+</body>
+</html>

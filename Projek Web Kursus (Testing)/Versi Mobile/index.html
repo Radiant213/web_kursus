@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Platform - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Learning Platform</h1>
+            <p>Tingkatkan skill dan raih karir impianmu</p>
+        </header>
+
+        <!-- NAVIGASI -->
+        <nav class="nav-tabs">
+            <a href="index.html" class="nav-tab active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="pelatihan.html" class="nav-tab">
+                <i class="fas fa-book"></i>
+                <span>Pelatihan</span>
+            </a>
+            <a href="pelatihan-saya.html" class="nav-tab">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Belajar</span>
+            </a>
+            <a href="profil.html" class="nav-tab">
+                <i class="fas fa-user"></i>
+                <span>Profil</span>
+            </a>
+        </nav>
+
+        <!-- KONTEN UTAMA -->
+        <main class="main-content">
+            <!-- HOME PAGE CONTENT -->
+            <div class="welcome-section">
+                <h2>Selamat Datang, Learner!</h2>
+                <p>Mari mulai perjalanan belajarmu hari ini</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="number">5</span>
+                    <span class="label">Pelatihan Diikuti</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">12</span>
+                    <span class="label">Jam Belajar</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">3</span>
+                    <span class="label">Sertifikat</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">78%</span>
+                    <span class="label">Rata-rata Progress</span>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Pelatihan Terbaru</div>
+                <div class="course-grid">
+                    <div class="course-card">
+                        <img src="https://via.placeholder.com/300x140/42a5f5/ffffff?text=HTML+CSS" alt="HTML CSS" class="course-image">
+                        <div class="course-content">
+                            <div class="course-title">HTML & CSS Dasar</div>
+                            <div class="course-desc">Pelajari dasar-dasar pembuatan website modern</div>
+                            <div class="progress-container">
+                                <div class="progress-bar" style="width: 70%"></div>
+                            </div>
+                            <div class="progress-text">70% selesai</div>
+                            <a href="#" class="btn btn-block">Lanjutkan Belajar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Fungsi untuk animasi progress bar
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        });
+    </script>
+</body>
+</html>
